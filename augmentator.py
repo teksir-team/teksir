@@ -36,30 +36,11 @@ class BertAugmentator(Augmentator):
         self.pipeline = transformers.pipeline("fill-mask", model=model, tokenizer=tokenizer)
         
 
-    def augment(self, df_train: pd.DataFrame):
+    def augment(self, sentence: str) -> str:
         """
-        :param df_train: DataFrame object which holds the training data as (X, y) pairs.
-        """        
-        augmentation_data = df_train.sample(frac=self.augmentation_config["frac"])
-        self.augmentation_indices = augmentation_data.index
-
-        print("Sentencizing the data", file=sys.stderr)
-        augmentation_data["text"] = augmentation_data["text"].apply(self.sentencizer.sentencize)
-        augmented_samples, augmented_labels = [], []
-        # TODO: Doing the replacement on the changed version of the sentence
-        # vs. initial version.
-
-        for idx, sample in augmentation_data.iterrows():
-            label = sample.label
-            sents = sample.text[0]
-            augmented_sentences = []
-            for sent in sents:    
-                augmented_sentences.append(self._augment_sentence(sent))
-
-            augmented_samples.append(" ".join(augmented_sentences))
-            augmented_labels.append(label)
-
-        return augmented_samples, augmented_labels
+        """
+        return self._augment_sentence(sentence)
+        
 
     def _augment_sentence(self, sentence: str) -> str:
         """
@@ -68,13 +49,14 @@ class BertAugmentator(Augmentator):
         
         tokenized_sent = " ".join(self.pipeline.tokenizer.tokenize(sentence)).replace(" ##", "")
         sent_tokens = tokenized_sent.split()
-        if len(sent_tokens) < 2:
+        len_sent_tokens = len(sent_tokens)
+        if len_sent_tokens < 2:
             return sentence
-        # Randomly change 5 tokens without any condition.
         # TODO:
         # This value will be a parameter. Also we might put some conditions here for punctuations and digits.
-        for i in range(5):
-            rand_idx = random.randrange(0, len(sent_tokens) - 1)
+        replace_token_count = int(len_sent_tokens * self.augmentation_config["frac"])
+        random_token_indices = random.sample(range(len_sent_tokens), replace_token_count)
+        for rand_idx in random_token_indices:
             sent_tokens[rand_idx] = self.pipeline.tokenizer.mask_token
             masked_sent = " ".join(sent_tokens)
             predictions = self.pipeline(masked_sent)
