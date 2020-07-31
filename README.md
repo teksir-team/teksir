@@ -1,4 +1,4 @@
-# Bağlamsal Modeller Kullanarak Metinsel Veri Çoğaltma Kütüphanesi
+# TEKSİR TAKIMI (Bağlamsal Modeller Kullanarak Metinsel Veri Çoğaltma Kütüphanesi)
 
 ## Odaklanılan sorun: 
 
