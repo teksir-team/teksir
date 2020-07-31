@@ -117,11 +117,11 @@ Bu çalışmada [TTC-3600](https://github.com/denopas/TTC-3600) veri kümesi kul
 
 
 * Muhammed Emir KOÇAK
-    * Sorumluluklar: Geliştirilecek modellerin tasarımı ve eğitimi
+    * Sorumluluklar: Geliştirilen modellerin tasarımı ve eğitimi
 
 
 * Muhammed Furkan ÇANKAYA
-    * Sorumluluklar: Geliştirilecek modellerin tasarımı ve eğitimi
+    * Sorumluluklar: Geliştirilen modellerin tasarımı ve eğitimi
 
 
 * Yavuz TEZGEL (Herhangi bir çalışma yapmamıştır).
