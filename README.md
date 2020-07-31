@@ -124,7 +124,11 @@ Bu çalışmada [TTC-3600](https://github.com/denopas/TTC-3600) veri kümesi kul
     * Sorumluluklar: Geliştirilen modellerin tasarımı ve eğitimi
 
 
-* Yavuz TEZGEL (Herhangi bir çalışma yapmamıştır).
+## İleriki Çalışmalar
+
+* Mevcut versiyon CPU üzerinde arttırım işlemlerini gerçekleştirmektedir. GPU kullanımı desteklenecektir.
+* Diğer bağlamsal modeller (RoBERTa, ELECTRA vb.) desteklenecektir.
+
 
 ## Kaynaklar
 
