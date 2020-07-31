@@ -20,7 +20,7 @@ Bağlamsal modellerden faydalanarak veri artırımı yapabilen doğal dil işlem
 
 ## Kullanım
 
-Uçtan uca bir örnek ["ornek_kullanim"]() notebook'unda gösterilmiştir.
+Uçtan uca bir örnek ["ornek_kullanim"](https://github.com/teksir-team/teksir/blob/master/ornek_kullanim.ipynb) notebook'unda gösterilmiştir.
 
 ```python
 from augmentator import BertAugmentator
