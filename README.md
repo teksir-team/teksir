@@ -1,5 +1,8 @@
 # TEKSİR TAKIMI (Bağlamsal Modeller Kullanarak Metinsel Veri Çoğaltma Kütüphanesi)
 
+[<i>Youtube Video Linki</i>](https://www.youtube.com/watch?v=5XFSsyKoFVU)
+
+
 ## Odaklanılan sorun: 
 
 Kısıtlı metinsel veri kümelerinin model geliştirmeleri için yetersiz kalması
