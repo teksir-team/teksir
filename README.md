@@ -2,6 +2,7 @@
 
 [<i>Youtube Video Linki</i>](https://www.youtube.com/watch?v=5XFSsyKoFVU)
 
+[<i>Sunum Linki</i>](https://github.com/teksir-team/teksir/blob/master/teksir_sunum.pdf)
 
 ## Odaklanılan sorun: 
 
